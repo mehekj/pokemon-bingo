@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Random Pok&eacute;mon Generator</title>
     <link
       href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
@@ -14,10 +15,20 @@
         font-weight: normal;
       }
       @media only screen and (max-width: 768px) {
+        * {
+          margin: 10px;
+        }
         button {
           width: 80%;
         }
+        h1 {
+          font-size: 1.5em;
+        }
+        #output {
+          height: 250px !important;
+        }
       }
+
       #output {
         height: 350px;
       }
@@ -963,7 +974,7 @@
         document.getElementById("output").innerHTML =
           "<h1>" +
           names[set[x] - 1] +
-          "</h1> <br /> <img src='images/img_" +
+          "</h1> <img src='images/img_" +
           set[x] +
           ".png' />";
         x++;
